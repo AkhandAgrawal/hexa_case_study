@@ -1,1 +1,1 @@
-# hexaware_case_study
+# hexa_case_study
