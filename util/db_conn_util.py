@@ -24,11 +24,10 @@ class DBConnection:
         return DBConnection.connection
 
 
-# Example of using the connection
-if __name__ == "__main__":
-    try:
-        conn = DBConnection.getConnection()
-    finally:
-        if conn:
-            conn.close()
-            print("Connection closed")
+
+try:
+    conn = DBConnection.getConnection()
+finally:
+    if conn:
+        conn.close()
+        print("Connection closed")
