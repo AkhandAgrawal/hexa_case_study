@@ -5,7 +5,6 @@ from entity.model import Vehicle
 def test_create_car(monkeypatch):
     service_provider = ICarLeaseRepositoryImpl()
 
-    # Simulate user input
     monkeypatch.setattr('builtins.input', lambda _: {
         "Enter Company Name: ": "Honda",
         "Enter Model: ": "Civic",
@@ -19,4 +18,4 @@ def test_create_car(monkeypatch):
     car = Vehicle(make="Honda", model="Civic", year=2021, daily_rate=120.0, status="available", passenger_capacity=5, engine_capacity=1.8)
     car_id = service_provider.add_car(car)
 
-    assert car_id is None  # Change this based on your actual implementation
+    assert car_id is None  
