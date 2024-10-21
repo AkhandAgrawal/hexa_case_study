@@ -92,7 +92,7 @@ class ICarLeaseRepositoryImpl(ICarLeaseRepository):
                             passenger_capacity=passenger_capacity, engine_capacity=engine_capacity, vehicle_id=vehicle_id)
         except CarNotFoundException as e:
             print(e)
-            raise  # Re-raise to ensure pytest captures it
+            raise  
         except Exception as e:
             print("Error occurred,", str(e))
             return None
@@ -156,7 +156,7 @@ class ICarLeaseRepositoryImpl(ICarLeaseRepository):
                 return Customer(customer_id=customer_id, first_name=first_name, last_name=last_name, email=email, phone_number=phone_number)
         except CustomerNotFoundException as e:
             print(e)
-            raise  # Re-raise to ensure pytest captures it
+            raise 
         except Exception as e:
             print("Error occurred,", str(e))
             return None
@@ -188,7 +188,7 @@ class ICarLeaseRepositoryImpl(ICarLeaseRepository):
         return row
     except LeaseNotFoundException as e:
         print(e)
-        raise  # Re-raise to ensure pytest captures it
+        raise 
     except Exception as e:
         print("Error occurred,", str(e))
         return None
