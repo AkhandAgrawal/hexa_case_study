@@ -24,7 +24,6 @@ class DBConnection:
         return DBConnection.connection
 
 
-
 try:
     conn = DBConnection.getConnection()
 finally:
